@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn server for DOMAIN
+
+[Service]
+Restart=on-failure
+User=devuser
+WorkingDirectory=/home/devuser/sites/DOMAIN
+EnvironmentFile=/home/devuser/sites/DOMAIN/.env
+
+ExecStart=/home/devuser/sites/DOMAIN/virtualenv/bin/gunicorn \
+	--bind unix:/tmp/DOMAIN.socket \
+	boleypickem.wsgi:application
+	
+[Install]
+WantedBy=multi-user.target
