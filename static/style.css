@@ -1,0 +1,19 @@
+@font-face {
+    font-family: sports;
+    src: url(/static/fonts/sports.ttf);
+}
+
+.title {
+    text-align: center;
+    color: red;
+    font-family: sports;
+    font-size: large;
+    font-size: 500%;
+}
+
+.countdown {
+    text-align: center;
+    font-family: verdana;
+    font-size: large;
+    font-size: 300%;
+}
